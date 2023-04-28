@@ -1,0 +1,341 @@
+
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*===== Variable Define =====*/
+:root {
+  --primary-color: #fd8eaf;
+  --white-color: #fff;
+  --text-color: #9e9999;
+  --black-color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/*
+=========================================
+    Custom Scrollbar
+=========================================
+*/
+
+/* ::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+} */
+
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
+/* h1 {
+  font-size: 6.25rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+h1 span {
+  color: var(--white-color);
+}
+
+h2 {
+  font-weight: 700;
+  position: relative;
+  font-size: 2.1875rem;
+  text-transform: capitalize;
+  color: var(--black-color);
+  line-height: 3.7rem;
+}
+
+h2:before {
+  background: #ef6d9f;
+  border-radius: 0.3125rem;
+  content: '';
+  position: absolute;
+  top: -1.5625rem;
+  left: 0;
+  width: 1.875rem;
+  height: 0.3125rem;
+}
+
+h4 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: 0.9375rem;
+  transition: all .3s linear;
+}
+
+h5 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-family: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 0.0625rem;
+} */
+.main-btn{
+  width: 9.375rem;
+  height: 3.125rem;
+  border: 0.063rem solid var(--primary-color); 
+  color:var(--black-color);
+  font-size: 1.125rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 0.3s;
+}
+
+
+.main-btn:hover {
+  background: var(--white-color);
+  color:var(--primary-color);
+}  
+.wrapper {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.text-content {
+  width: 60%;
+  margin: auto;
+}
+/*
+==========================================
+ about section Design
+==========================================
+*/
+.about-section .carousel-inner{
+    border-radius: 0 0 5rem;
+  }
+  .about-section .main-btn span,
+  .style-section .main-btn span{
+    color:var(--black-color);
+  }
+  .about-section .carousel-indicators{
+    margin-bottom:-2.5rem;
+  }
+  .about-section .carousel-indicators [data-bs-target]{
+    width:0.625rem;
+    height:0.625rem;
+    border-radius: 50%;
+    background-color:var(--primary-color);
+  } 
+  
+  /* Rectangle & Circle Shapes */
+  .rectangle-shape,
+  .circle-shape {
+    content: '';
+    border: 0.25rem solid;
+    border-bottom-color: #ef6d9f;
+    border-right-color: #ef6d9f;
+    border-top-color: #ee8d6d;
+    border-left-color: #ee8d6d;
+    background-image: -moz-linear-gradient(top, #ee8d6d 0%, #ef6d9f 100%);
+    background-image: -webkit-linear-gradient(top, #ee8d6d 0%, #ef6d9f 100%);
+    background-image: linear-gradient(to bottom, #ee8d6d 0%, #ef6d9f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$colorBtnPrimaryHover', endColorstr='$colorPrimary', GradientType=0);
+    background-size: 100% 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin: auto;
+  }
+  .rectangle-shape.small,
+  .circle-shape.small{
+    border-width:0.1875rem;
+    width:1.25rem;
+    height:1.25rem;
+    animation: animationframesone 35s alternate infinite linear;
+  } 
+  .rectangle-shape.large,
+  .circle-shape.large{ 
+    width:2.5rem;
+    height:2.5rem;
+    animation: animationframesthree 35s alternate infinite linear;
+  } 
+  .circle-shape.large{
+    left:0;
+    right:0;
+    bottom:15%;
+    opacity: .5;
+  }
+  .rectangle-shape.small{
+    left:0;
+    bottom:10%;
+  }
+  .rectangle-shape{
+    border-radius: 0.1875rem;
+  }
+  .circle-shape{
+    border-radius: 50%;
+  }
+  @keyframes animationframesone {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  
+    20% {
+      transform: translate(4.5625rem, -0.0625rem) rotate(36deg);
+    }
+  
+    40% {
+      transform: translate(8.8125rem, 4.5rem) rotate(72deg);
+    }
+  
+    60% {
+      transform: translate(5.1875rem, 7.625rem) rotate(108deg);
+    }
+  
+    80% {
+      transform: translate(-2.5rem, 4.5rem) rotate(144deg);
+    }
+  
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  @keyframes animationframesthree {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1.2);
+    }
+  
+    20% {
+      transform: translate(-4.25rem, -6.25rem) rotate(70deg) scale(0.5);
+    }
+  
+    40% {
+      transform: translate(7.1875rem, 3.4375rem) rotate(120deg) scale(1);
+    }
+  
+    60% {
+      transform: translate(2.1875rem, 8.75rem) rotate(155deg) scale(1.2);
+    }
+  
+    80% {
+      transform: translate(-2.1875rem, 5.625rem) rotate(180deg) scale(0.5);
+    }
+  
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+  }
+  
+
+
+  /* ==========================================
+FAQ section Design
+==========================================
+* */
+.faq h4 span{
+    color:red;
+    font-size: 1.875rem;
+    margin-right:0.3125rem;
+  } 
+  .book-food{
+    /* width:100%;
+    background:url(../images/partner-1.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:0 71.9125px;
+    padding:4.375rem 0 */
+  }
+
+
+
+.about_wrapper .projects{
+    padding:30px 0;
+}
+.about_wrapper .projects h2{
+    color: var(--text-orange);
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom:0;
+}
+.about_wrapper .projects p{ 
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5; 
+    color:var(--text-light-2);
+}
+
+.growing{
+    height: fit-content;
+    padding: 50px;
+}
+  @media(max-width:575px) {
+
+
+    /* about */ 
+    .about-slider,
+    .feature-img-box,
+    .style-img{
+        width:50%;
+        margin:auto;
+    }
+    .about-section .carousel-inner{
+        border-radius: 0 0 1.875rem;
+    }
+}
