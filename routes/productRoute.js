@@ -14,7 +14,8 @@ import {
   realtedProductController,
   searchProductController,
   updateProductController,
-  productSingleFiltersController
+  productSingleFiltersController,
+  popularProductController
 } from "../controllers/productController.js";
 import { isAdmin, requireSignIn } from '../middlewares/authMiddleware.js';
 import formidable from "express-formidable";
@@ -50,6 +51,9 @@ router.delete("/delete-product/:pid", deleteProductController);
 
 //filter product
 router.post("/product-filters", productFiltersController);
+
+//popular product
+router.post("/product-popular", popularProductController);
 
 //product count
 router.get("/product-count", productCountController);

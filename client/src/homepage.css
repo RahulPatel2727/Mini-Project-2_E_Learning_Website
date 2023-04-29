@@ -1,18 +1,12 @@
-/* 
-Product Card UI Design
-👨By: Coding Design
 
-You can do whatever you want with the code. However if you love my content, you can subscribed my YouTube Channel
-🌎link: www.youtube.com/codingdesign
- */
 
- :root {
+ /* :root {
     --primary: #18253c;
-    /* --primary: #fff; */
+
     --secondary: #00dd53;
     --bg: #0e1523;
-    /* --bg: #f5f5f5; */
-}
+
+} */
 /* 
  .slider {
     background-color: var(--bg);
@@ -27,7 +21,7 @@ You can do whatever you want with the code. However if you love my content, you 
 } */
 
 
-.card {
+/* .card {
     position: relative;
     width: 17rem;
     height: 23rem;
@@ -43,19 +37,89 @@ You can do whatever you want with the code. However if you love my content, you 
 .card:hover {
     border: .1rem solid var(--secondary);
     transform: scale(1.05);
-}
+} */
 
 .slider
 {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
 }
 
 .box-1{
     width: 100%;
     height: fit-content;
-    background-color: #00dd53;
 }
+
+/* categorycard */
+.catcard
+{
+  width: 350px;
+  height: 350px;
+  margin-top: 10px;
+  box-shadow: 0px 3px 5px #fd8eaf;
+}
+
+ .catbox
+ {
+  margin: 20px;
+ }
+
+
+.feature_section .features-box {
+  background-color: transparent;
+  border: 0.01rem solid #fd8eaf;
+  padding: 2rem 0;
+  transition: all 0.3s;
+  border-radius: 20%;
+
+}
+
+.feature_section .features-box .features-icon-border {
+  background-color: transparent;
+  border-radius: 30%;
+  border: 0.2rem solid var(#fd8eaf);
+  padding: 1.3rem;
+  display: inline-block;
+}
+
+.feature_section .features-box .features-icon {
+  height: 10rem;
+  width: 10rem;
+  background-color: var(#fd8eaf);
+  margin: auto;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature_section .features-box .features-icon img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.feature_section .features-box h3 {
+  margin-top: 1.5rem;
+  color: var(--primary-text);
+}
+
+.feature_section .features-box:hover {
+  /* background-color: #03262c;
+  border-color: #03262c; */
+  background-color: #05d0f4;
+  border-color: #05d0f4;
+  transform: translateY(-10px);
+ 
+}
+
+.feature_section .features-box:hover h3 {
+  color: #fff;
+}
+
+.feature_section .features-box:hover .features-icon-border {
+  border-color:#fd8eaf;
+}
+
 
 /* category */
 
@@ -106,33 +170,12 @@ You can do whatever you want with the code. However if you love my content, you 
   .story-section {
     width: 100%;
     height: 28.125rem;
-    /* background: url("../images/bg/bg-2.jpg") no-repeat center; */
     background-size: cover;
     padding-top: 100px;
     text-align: center;
   }
   .story-section h2 {
     color: var(--primary-color);
-  }
-
-  .hp-card
-  {
-    background-image: url("./image/hp2.jpg");
-    background-color: white;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .hp2-card
-  {
-    background-image: url("./image/hp1.jpg");
-    background-color: white;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .testtext{
@@ -143,16 +186,17 @@ You can do whatever you want with the code. However if you love my content, you 
    
   }
 
-  .testi{
-    background-image: url('./image/testi-avatar.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-left:40%;
-    margin-top: -10%;
-  }
-  
+  /* testimonial */
+.carousel-inner {
+  display: flex;
+  text-align: center;
+  /* background-color: lightgrey; */
+  background-color: wheat;
+  align-items: center;
+  height:400px ;
+}
+
+.carousel-control-prev-icon{
+  color: #000;
+}
 

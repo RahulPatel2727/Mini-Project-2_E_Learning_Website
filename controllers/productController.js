@@ -213,6 +213,25 @@ export const productFiltersController = async (req, res) => {
   }
 };
 
+export const popularProductController = async (req, res) => {
+  try {
+    const name = "python";
+    
+    const products = await productModel.find({name});
+    res.status(200).send({
+      success: true,
+      products,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).send({
+      success: false,
+      message: "Error WHile Filtering Products",
+      error,
+    });
+  }
+};
+
 // filters
 export const productSingleFiltersController = async (req, res) => {
   try {
