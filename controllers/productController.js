@@ -146,9 +146,11 @@ export const deleteProductController = async (req, res) => {
 //upate producta
 export const updateProductController = async (req, res) => {
   try {
-    const { name, description, price, category } =
+    const { name, description, price, category ,video} =
       req.fields;
     const { photo } = req.files;
+    const arr = video.split(',');
+    req.fields.video = arr;
     //alidation
     switch (true) {
       case !name:

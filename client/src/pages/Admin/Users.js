@@ -4,7 +4,7 @@ import AdminMenu from '../../components/AdminMenu'
 const Purchased = () => {
   return (
     <Layout>
-        <div className="container-fluid m-3 p-3 dashboard">
+        <div className="container-fluid  dashboard">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />

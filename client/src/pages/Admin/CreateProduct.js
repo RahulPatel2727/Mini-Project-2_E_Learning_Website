@@ -80,7 +80,7 @@ const CreateProduct = () => {
 
   return (
     <Layout title={"Dashboard - Add Course"}>
-      <div className="container-fluid m-3 p-3 dashboard">
+      <div className="container-fluid dashboard">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />
@@ -161,10 +161,10 @@ const CreateProduct = () => {
                         {
                           links.map((link, index) => (
                           <div key={index}>
-                            <input type="text" value={link} onChange={(e) => handleLinkChange(index, e)} />
+                            <input type="text" value={link} onChange={(e) => handleLinkChange(index, e)}   className="form-control"  style={{marginBottom:"20px"}}/>
                           </div>
                         ))}
-                    <button type="button" onClick={addLinkField}>Add video link</button>
+                    <button type="button" onClick={addLinkField} className="btn btn-primary" >Add video link</button>
               </div>
 
              

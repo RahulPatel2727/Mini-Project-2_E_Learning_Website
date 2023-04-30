@@ -4,6 +4,8 @@ import { Link,useNavigate ,useLocation} from 'react-router-dom'
 import {toast} from 'react-hot-toast';
 import axios from 'axios'
 import { useAuth } from '../context/auth';
+import videoBg from "../video/v1.mp4";
+
 const Login = () => {
 
   const [email,setEmail] = useState("")
@@ -45,29 +47,33 @@ const Login = () => {
 
   return (
     <Layout  title={'E-Shiksha SignIn'}>    
-    <div className='login'>
-    <div className="container-login">
+      <div className='login common'>
+        <div className='main'>
+          <video src={videoBg} autoPlay loop muted/>
+        </div>
+      
+        <div className="container-login">
           <div className="drop">
             <div className="content">
               <form onSubmit={handleSubmit}>
                 <div className="input-box">
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    required  />
+                    required />
                 </div>
                 <div className="input-box">
-                  <input 
-                    type="password" 
+                  <input
+                    type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    required  />
+                    required />
                 </div>
                 <div className="input-box">
-                  <input type="submit" defaultValue="Login"/>
+                  <input type="submit" defaultValue="Login" />
                 </div>
               </form>
             </div>

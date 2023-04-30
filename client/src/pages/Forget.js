@@ -4,6 +4,8 @@ import { Link,useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
 import axios from 'axios'
 import Verify from './Verify'
+import videoBg from "../video/v1.mp4";
+
 const Forget = () => {
   const emailRef = useRef();
   const [otpForm,showForm] = useState(true);
@@ -32,7 +34,11 @@ const Forget = () => {
   return (
   
     <Layout title={'E-Shiksha Reset Password'}>
-      <div className='forget'>
+      <div className='forget common'>
+
+      <div className='main'>
+          <video src={videoBg} autoPlay loop muted/>
+        </div>
       <div className="container-f">
           <div className="drop">
             <div className="content">

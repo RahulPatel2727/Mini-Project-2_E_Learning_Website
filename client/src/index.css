@@ -6,8 +6,11 @@
 
 .nav{
   height: 9vh;
-  box-shadow: 0px 3px 5px #fd8eaf;
+  width: 100%;
+  /* box-shadow: 0px 3px 5px #fd8eaf; */
+  box-shadow: 0px 3px 5px gray;
   margin-bottom: 15px;
+  z-index: 100;
 
 }
 
@@ -15,19 +18,62 @@
   margin-right: 10%;
 }
 /* Register */
-.register
+
+
+
+
+.common
 {
   width: 100%;
-  min-height:80vh;
-  background-color: lightgray;
+  height: 50vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -15px;
+}
+
+
+
+video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-login {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12%;
+ 
+}
+
+.container-r {
+  /* margin-top: 20px; */
+  /* margin-bottom: 200px; */
+  position: absolute;
+  /* left: -80px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+
+.container-f {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
 }
 
 .drop {
   height: 600px;
   width: 600px;  
+  backdrop-filter: blur(5px);
 }
 
 .content {
@@ -36,16 +82,6 @@
 
 
 
-.container-r {
-  /* margin-top: 20px; */
-  /* margin-bottom: 200px; */
-  position: relative;
-  /* left: -80px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
 
 .container-r .drop {
   position: relative;
@@ -58,13 +94,16 @@
   justify-content: center;
   align-items: center;
   border-radius: 62% 38% 24% 76% / 59% 60% 40% 41%;
+
+  
 }
 
 .container-r .drop:hover {
   border-radius: 50%;
+
 }
 
-.container-r .drop::before {
+/* .container-r .drop::before {
   content: '';
   position: absolute;
   top: 60px;
@@ -86,7 +125,7 @@
   border-radius: 50%;
   background: #fff;
   opacity: 0.9;
-}
+} */
 
 .container-r .drop .content {
   position: relative;
@@ -212,22 +251,8 @@
 
 /* Login */
 
-.login{
-  width: 100%;
-  min-height:80vh;
-  background-color: lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
-.container-login {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
 .container-login .drop {
@@ -247,7 +272,7 @@
   border-radius: 50%;
 }
 
-.container-login .drop::before {
+/* .container-login .drop::before {
   content: '';
   position: absolute;
   top: 50px;
@@ -269,7 +294,7 @@
   border-radius: 50%;
   background: #fff;
   opacity: 0.9;
-}
+} */
 
 .container-login .drop .content {
   position: relative;
@@ -406,20 +431,8 @@
 /* End of Login */
 
 /* Forget */
-.forget{
-  width: 100%;
-  min-height:80vh;
-  background-color: lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container-f {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
 
 .container-f .drop {
   position: relative;
@@ -438,7 +451,7 @@
   border-radius: 50%;
 }
 
-.container-f .drop::before {
+/* .container-f .drop::before {
   content: '';
   position: absolute;
   top: 60px;
@@ -460,7 +473,7 @@
   border-radius: 50%;
   background: #fff;
   opacity: 0.9;
-}
+} */
 
 .container-f .drop .content {
   position: relative;
@@ -527,7 +540,7 @@
 }
 
 .container-f .drop .content form .input-box:last-child {
-  width: 120px;
+  width: 130px;
   background: #ff3a75;
   box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
       15px 15px 10px rgba(0, 0, 0, 0.05), 15px 10px 15px rgba(0, 0, 0, 0.025);

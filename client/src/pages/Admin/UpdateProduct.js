@@ -17,6 +17,16 @@ const UpdateProduct = () => {
   const [category, setCategory] = useState("");
   const [photo, setPhoto] = useState("");
   const [id, setId] = useState("");
+  const [links, setLinks] = useState([]);
+
+  const addLinkField = () => {
+    setLinks([...links, '']);
+  };
+  const handleLinkChange = (index, e) => {
+    const newLinks = [...links];
+    newLinks[index] = e.target.value;
+    setLinks(newLinks);
+  };
 
   //get single product
   const getSingleProduct = async () => {
@@ -30,6 +40,7 @@ const UpdateProduct = () => {
       setPrice(data.product.price);
       setPrice(data.product.price);
       setCategory(data.product.category._id);
+      setLinks(data.product.video)
     } catch (error) {
       console.log(error);
     }
@@ -65,6 +76,8 @@ const UpdateProduct = () => {
       productData.append("price", price);
       photo && productData.append("photo", photo);
       productData.append("category", category);
+      productData.append("video", links);
+
       const { data } = axios.put(
         `/api/v1/product/update-product/${id}`,
         productData
@@ -84,7 +97,7 @@ const UpdateProduct = () => {
   //delete a product
   const handleDelete = async () => {
     try {
-      let answer = window.prompt("Are You Sure want to delete this product ? ");
+      let answer = window.prompt("Are You Sure want to delete this product ? yes/no ");
       if (!answer) return;
       const { data } = await axios.delete(
         `/api/v1/product/delete-product/${id}`
@@ -96,9 +109,25 @@ const UpdateProduct = () => {
       toast.error("Something went wrong");
     }
   };
+
+ const  deleteVideo = async (index) =>{
+    const newLinks = [];
+    const arr = [...links];
+
+    for(let i=0;i<links.length;i++)
+    {
+      if(i!=index)
+      {
+        newLinks[i]= arr[i];
+      }
+    }
+    setLinks(newLinks);
+  }
+
+
   return (
     <Layout title={"Dashboard - Create Product"}>
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid  dashboard">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />
@@ -184,6 +213,29 @@ const UpdateProduct = () => {
                   onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
+
+              <div className="mb-3">
+                        {
+                          links?.map((link, index) => (
+
+                          <div key={index}>
+                            <input type="text" value={link} onChange={(e) => handleLinkChange(index, e)}   className="form-control"  style={{marginBottom:"20px"}}/>
+                          
+                            <button
+                            className="btn btn-danger ms-2"
+                            onClick={() => {
+                              deleteVideo(index);
+                            }}
+
+                            style={{marginBottom:"10px"}}
+                          >
+                            Delete
+                          </button>
+                          </div>
+                        ))}
+                    <button type="button" onClick={addLinkField} className="btn btn-primary" >Add video link</button>
+              </div>
+
              
              
               <div className="mb-3">

@@ -162,10 +162,10 @@ const HomePage = () => {
 
         
      
-    {categories?.map((c) => (
-      <div className="catbox">
-
-        <div className="card features-box catcard" key={c._id}>
+    
+      
+     
+            <div className="card features-box catcard" onClick={() => navigate("/courses")}>
           <div className="text-center">
             <div className="features-icon-border">
               <div className="features-icon">
@@ -173,12 +173,104 @@ const HomePage = () => {
               </div>
             </div>
             <div className="features-text">
-              <h3>{c.name}</h3>
+              <h3>Development</h3>
             </div>
           </div>
         </div>
-      </div>
-     ))}   
+
+        <div className="card features-box catcard" onClick={() => navigate("/courses")}>
+          <div className="text-center">
+            <div className="features-icon-border">
+              <div className="features-icon">
+                <img src={require('../image/java.png')}  />
+              </div>
+            </div>
+            <div className="features-text">
+              <h3>Marketing</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="card features-box catcard" onClick={() => navigate("/courses")}>
+          <div className="text-center">
+            <div className="features-icon-border">
+              <div className="features-icon">
+                <img src={require('../image/java.png')}  />
+              </div>
+            </div>
+            <div className="features-text">
+              <h3>Music</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="card features-box catcard" onClick={() => navigate("/courses")}>
+          <div className="text-center">
+            <div className="features-icon-border">
+              <div className="features-icon">
+                <img src={require('../image/java.png')}  />
+              </div>
+            </div>
+            <div className="features-text">
+              <h3>Personal Development</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="card features-box catcard" onClick={() => navigate("/courses")}>
+          <div className="text-center">
+            <div className="features-icon-border">
+              <div className="features-icon">
+                <img src={require('../image/java.png')}  />
+              </div>
+            </div>
+            <div className="features-text">
+              <h3>Photography</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="card features-box catcard" onClick={() => navigate("/courses")}>
+          <div className="text-center">
+            <div className="features-icon-border">
+              <div className="features-icon">
+                <img src={require('../image/java.png')}  />
+              </div>
+            </div>
+            <div className="features-text">
+              <h3>IT and Software</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="card features-box catcard" onClick={() => navigate("/courses")}>
+          <div className="text-center">
+            <div className="features-icon-border">
+              <div className="features-icon">
+                <img src={require('../image/java.png')}  />
+              </div>
+            </div>
+            <div className="features-text">
+              <h3>Design</h3>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="card features-box catcard"  onClick={() => navigate("/courses")}>
+          <div className="text-center">
+            <div className="features-icon-border">
+              <div className="features-icon">
+                <img src={require('../image/java.png')}  />
+              </div>
+            </div>
+            <div className="features-text">
+              <h3>Business</h3>
+            </div>
+          </div>
+        </div>
+        
+   
    
 </section>
 
@@ -187,7 +279,8 @@ const HomePage = () => {
         <h1 className="text-center text-sec">Our popular Courses</h1>
         <div className="d-flex justify-content-center  flex-wrap">
           {products?.map((p) => (
-            <div className="card m-2" key={p._id}>
+            <div className="ccard card m-2" key={p._id}>
+              <div className="main-content">
               <img
                 src={`/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top"
@@ -196,17 +289,28 @@ const HomePage = () => {
               <div className="card-body">
                 <div className="card-name-price">
                   <h5 className="card-title">{p.name}</h5>
+                  <ul className="list-unstyled d-flex  text-warning mb-0">
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="far fa-star fa-sm" /></li>
+                  </ul>
+
                   <h5 className="card-title card-price">
+                    ₹
                     {p.price.toLocaleString("en-US", {
-                      style: "currency",
-                      currency: "IND",
+                      // style: "currency",
+                      // currency: "₹",
                     })}
                   </h5>
                 </div>
                 <p className="card-text ">
                   {p.description.substring(0, 60)}...
                 </p>
-                <div className="card-name-price">
+                </div>
+                <div className="card-name-price  overlay-content">
+                  <div className="cbtn">
                   <button
                     className="btn btn-info ms-1"
                     onClick={() => navigate(`/product/${p.slug}`)}
@@ -233,7 +337,7 @@ const HomePage = () => {
                   >
                     ADD TO CART
                   </button>
-
+                  </div>
                 </div>
               </div>
             </div>
@@ -241,6 +345,8 @@ const HomePage = () => {
 
 
         </div>
+        
+        
       </section>
 
 

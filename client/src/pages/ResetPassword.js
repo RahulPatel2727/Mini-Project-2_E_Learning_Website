@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { useNavigate,useLocation} from 'react-router-dom'
 import {toast} from 'react-hot-toast';
 import axios from 'axios'
+import videoBg from "../video/v1.mp4";
 
 const ResetPassword = () => {
   const location = useLocation();
@@ -39,7 +40,11 @@ const ResetPassword = () => {
 
   return (    
     <Layout title={"E-Shiksha Reset Password"}>
-            <div className='forget'>
+            <div className='forget common'>
+                  <div className='main'>
+                    <video src={videoBg} autoPlay loop muted />
+                  </div>
+
                 <div className="container-f">
                     <div className="drop">
                         <div className="content">

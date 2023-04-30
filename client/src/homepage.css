@@ -51,75 +51,82 @@
 }
 
 /* categorycard */
-.catcard
-{
-  width: 350px;
-  height: 350px;
-  margin-top: 10px;
-  box-shadow: 0px 3px 5px #fd8eaf;
-}
-
- .catbox
- {
-  margin: 20px;
- }
-
-
-.feature_section .features-box {
-  background-color: transparent;
-  border: 0.01rem solid #fd8eaf;
-  padding: 2rem 0;
-  transition: all 0.3s;
-  border-radius: 20%;
-
-}
-
-.feature_section .features-box .features-icon-border {
-  background-color: transparent;
-  border-radius: 30%;
-  border: 0.2rem solid var(#fd8eaf);
-  padding: 1.3rem;
+.catcard {
+  background: #fff;
+  border-radius: 2px;
   display: inline-block;
-}
-
-.feature_section .features-box .features-icon {
-  height: 10rem;
-  width: 10rem;
-  background-color: var(#fd8eaf);
-  margin: auto;
-  border-radius: 30%;
+  height: 250px;
+  margin: 0.5rem;
+  position: relative;
+  width: 300px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.feature_section .features-box .features-icon img {
-  width: 10rem;
-  height: 10rem;
+.catcard {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.feature_section .features-box h3 {
-  margin-top: 1.5rem;
-  color: var(--primary-text);
+.catcard:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.feature_section .features-box:hover {
-  /* background-color: #03262c;
-  border-color: #03262c; */
-  background-color: #05d0f4;
-  border-color: #05d0f4;
-  transform: translateY(-10px);
- 
+.features-text{
+  margin-top: 20px;
 }
 
-.feature_section .features-box:hover h3 {
-  color: #fff;
+/* course */
+.ccard {
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+.ccard .main-content {
+  width: 100%;
+  height: 100%;
+}
+.ccard:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.feature_section .features-box:hover .features-icon-border {
-  border-color:#fd8eaf;
+.ccard .main-content img {
+  width: 100%;
+  height: 50%;
+}
+.ccard .overlay-content {
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  color: #080808;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  transition: 0.6s;
+/*   top: 0%; */
+  top: 100%;
+  opacity: 0.8;
+}
+.ccard:hover .overlay-content {
+  /* left: 0; */
+  transform: translateY(-13%);
+}
+.cbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
 }
 
+
+@media (max-width: 576px) {
+  .ccard {
+    width: 300px;
+    height: 450px;
+  }
+}
 
 /* category */
 

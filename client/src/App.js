@@ -25,6 +25,7 @@ import Products from './pages/Admin/Products';
 // import Users from './pages/Admin/Users'
 import AdminUsers from './pages/Admin/AdminUsers';
 import View from './pages/user/View';
+import AllCourses from './pages/AllCourse';
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
       <Route path="/forget" element={<Forget/>} />
       <Route path="/reset" element={<ResetPassword/>} />
       <Route path="/cart" element={<CartPage/>} />
+      <Route path="/courses" element={<AllCourses/>} />
      
       <Route path="*" element={<PageNotFound  />  } />
     </Routes>

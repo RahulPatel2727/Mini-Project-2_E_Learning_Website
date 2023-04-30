@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import {toast} from 'react-hot-toast';
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom';
-
+import videoBg from "../video/v1.mp4";
 
 const Register = () => {
 
@@ -11,6 +11,7 @@ const Register = () => {
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
   const [cpassword,setcPassword] = useState("")
+  const [profile,setProfile] = useState("")
   const navigate = useNavigate();
   //form function
 
@@ -22,7 +23,6 @@ const Register = () => {
         navigate('/login')
       
         toast.success(res.data.message)
-         
       }
       else
       {
@@ -41,7 +41,11 @@ const Register = () => {
   return (
     <Layout title={'E-Shiksha SignUp'}>
       
-      <div className='register'>    
+      <div className='register common'>    
+
+      <div className='main'>
+          <video src={videoBg} autoPlay loop muted/>
+        </div>
             <div className="container-r">
               <div className="drop">
                 <div className="content">
@@ -81,6 +85,24 @@ const Register = () => {
                         onChange={(e) => setcPassword(e.target.value)}
                         required />
                     </div>
+
+                {/* <div>
+
+                  <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <label className="form-check-label" htmlFor="flexRadioDefault1"  style={{fontSize:"20px"}}>
+                      Teacher
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked />
+                    <label className="form-check-label" htmlFor="flexRadioDefault2" style={{fontSize:"20px"}}>
+                     Student
+                    </label>
+                  </div>
+                </div> */}
+
+
                     <div className="input-box">
                       <input type="submit" defaultValue="Sign Up"/>
                     </div>

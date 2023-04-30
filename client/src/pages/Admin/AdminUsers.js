@@ -22,7 +22,7 @@ const AdminUsers = () => {
   }, [auth?.token]);
   return (
     <Layout title={"Record"}>
-      <div className="container-flui p-3 m-3 dashboard">
+      <div className="container-fluid dashboard">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu/>
@@ -50,7 +50,7 @@ const AdminUsers = () => {
                         <td>{i + 1}</td>
                         <td>{o?.status}</td>
                         <td>{o?.buyer?.name}</td>
-                        <td>{moment(o?.createAt).fromNow()}</td>
+                        <td>{moment(o?.createAt).date()}</td>
                         <td>{o?.payment.success ? "Success" : "Failed"}</td>
                      
                       </tr>
