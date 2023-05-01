@@ -30,7 +30,7 @@ const Products = () => {
         </div>
         <div className="col-md-9">
           <h1 className="text-center">All Courses</h1>
-          <div className="d-flex flex-wrap">
+          {/* <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <Link
                 key={p._id}
@@ -50,7 +50,50 @@ const Products = () => {
                 </div>
               </Link>
             ))}
-          </div>
+          </div> */}
+          <div className="d-flex justify-content-center  flex-wrap">
+          {products?.map((p) => (
+            <Link
+            key={p._id}
+            to={`/dashboard/admin/product/${p.slug}`}
+            className="product-link"
+          >
+            <div className="ccard card m-2" key={p._id}>
+              <div className="main-content">
+              <img
+                src={`/api/v1/product/product-photo/${p._id}`}
+                className="card-img-top"
+                alt={p.name}
+              />
+              <div className="card-body">
+                <div className="card-name-price">
+                  <h5 className="card-title">{p.name}</h5>
+                  <ul className="list-unstyled d-flex  text-warning mb-0">
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="far fa-star fa-sm" /></li>
+                  </ul>
+
+                  <h5 className="card-title card-price">
+                    ₹
+                    {p.price.toLocaleString("en-US", {
+                      // style: "currency",
+                      // currency: "₹",
+                    })}
+                  </h5>
+                </div>
+                <p className="card-text ">
+                  {p.description.substring(0, 60)}...
+                </p>
+                </div>
+             
+              </div>
+            </div>
+            </Link>
+          ))}
+        </div>
         </div>
       </div>
     </Layout>

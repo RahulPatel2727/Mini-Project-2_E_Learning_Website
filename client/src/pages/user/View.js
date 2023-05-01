@@ -28,8 +28,8 @@ const View = () => {
   };
   return (
     <Layout>
-    <div className="container-fluid m-3 p-3 dashboard">
-    <div className="row">
+  
+    <div className="row dashboard">
       <div className="col-md-3">
         <UserMenu/>
       </div>
@@ -68,15 +68,12 @@ const View = () => {
                     </ol>
           </div>
 
-            <div>
-               
-                      
-            </div>
+            <div>            
+           </div>
           </div>
           </div>
       </div>
     </div>
-  </div>
 </Layout>   
   )
 }

@@ -18,7 +18,7 @@ const Register = () => {
   const handleSubmit = async (e) =>{
     e.preventDefault();
     try{
-      const res = await axios.post("/api/v1/auth/register",{name,email,password,cpassword});
+      const res = await axios.post("/api/v1/auth/register",{name,email,password,cpassword,profile});
       if(res.data.success){
         navigate('/login')
       
@@ -85,22 +85,17 @@ const Register = () => {
                         onChange={(e) => setcPassword(e.target.value)}
                         required />
                     </div>
+                    
+                    <div className="input-box">
+                      <input 
+                        type="text"  
+                        placeholder="Student/Teacher"
+                        value={profile}
+                        onChange={(e) => setProfile(e.target.value)}
+                        required />
+                    </div>
 
-                {/* <div>
-
-                  <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                    <label className="form-check-label" htmlFor="flexRadioDefault1"  style={{fontSize:"20px"}}>
-                      Teacher
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked />
-                    <label className="form-check-label" htmlFor="flexRadioDefault2" style={{fontSize:"20px"}}>
-                     Student
-                    </label>
-                  </div>
-                </div> */}
+             
 
 
                     <div className="input-box">

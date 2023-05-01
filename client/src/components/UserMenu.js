@@ -6,12 +6,12 @@ const UserMenu = () => {
     <div className="text-center">
       <div className="list-group dashboard-menu">
         <h4>Student Panel</h4>
-        <NavLink
+        {/* <NavLink
           to="/dashboard/user/profile"
           className="list-group-item list-group-item-action"
         >
           Profile
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/dashboard/user/mycourses"
           className="list-group-item list-group-item-action"

@@ -138,7 +138,7 @@ const AllCourses = () => {
         </div>
         <div className="col-md-9 ">
           <h1 className="text-center">All Courses</h1>
-          <div className="d-flex justify-content-center  flex-wrap">
+          {/* <div className="d-flex justify-content-center  flex-wrap">
             {
               products.length==0 ? <>Opps! no result found</> : <>  {products?.map((p) => (
                 <div className="card m-2" key={p._id}>
@@ -195,8 +195,75 @@ const AllCourses = () => {
               ))} </> 
             }
             
-          </div>
-         
+          </div> */}
+         <div className="d-flex justify-content-center  flex-wrap">
+          {products?.map((p) => (
+            <div className="ccard card m-2" key={p._id}>
+              <div className="main-content">
+              <img
+                src={`/api/v1/product/product-photo/${p._id}`}
+                className="card-img-top"
+                alt={p.name}
+              />
+              <div className="card-body">
+                <div className="card-name-price">
+                  <h5 className="card-title">{p.name}</h5>
+                  <ul className="list-unstyled d-flex  text-warning mb-0">
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="fas fa-star fa-sm" /></li>
+                    <li><i className="far fa-star fa-sm" /></li>
+                  </ul>
+
+                  <h5 className="card-title card-price">
+                    ₹
+                    {p.price.toLocaleString("en-US", {
+                      // style: "currency",
+                      // currency: "₹",
+                    })}
+                  </h5>
+                </div>
+                <p className="card-text ">
+                  {p.description.substring(0, 60)}...
+                </p>
+                </div>
+                <div className="card-name-price  overlay-content">
+                  <div className="cbtn">
+                  <button
+                    className="btn btn-info ms-1"
+                    onClick={() => navigate(`/product/${p.slug}`)}
+                  >
+                    More Details
+                  </button>
+
+                  <button
+                    className="btn btn-dark ms-1"
+                    onClick={() => {
+                      if (!Contains(p, [...cart])) {
+                        setCart([...cart, p]);
+                        localStorage.setItem(
+                          "cart",
+                          JSON.stringify([...cart, p])
+                        );
+                        toast.success("Item Added to cart");
+                      }
+                      else {
+                        toast.success("Item Already added to cart");
+                      }
+
+                    }}
+                  >
+                    ADD TO CART
+                  </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+
+        </div>
         </div>
        
       </div>

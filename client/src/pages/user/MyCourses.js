@@ -32,59 +32,86 @@ const MyCourses = () => {
             <p>{JSON.stringify(orders,null,4)}</p>
           </div> */}
           <div className="col-md-9">
-            <h1 className="text-center">All Courses</h1>
+            <h1 className="text-center">My Courses</h1>
             {orders?.map((o, i) => {
               return (
-                <div className="border shadow">
-                  {/* <table className="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Buyer</th>
-                        <th scope="col"> date</th>
-                        <th scope="col">Payment</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>{i + 1}</td>
-                        <td>{o?.status}</td>
-                        <td>{o?.buyer?.name}</td>
-                        <td>{moment(o?.createAt).fromNow()}</td>
-                        <td>{o?.payment.success ? "Success" : "Failed"}</td>
-                     
-                      </tr>
-                    </tbody>
-                  </table> */}
-                  <div className="container">
+                
+                  
+                  <div className="d-flex justify-content-center  flex-wrap">
                     {o?.course?.map((p, i) => (
-                      <div className="row mb-2 p-3 card flex-row" key={p._id}>
-                        <div className="col-md-4">
+                    //   <div className="row mb-2 p-3 card flex-row" key={p._id}>
+                    //     <div className="col-md-4">
+                    //       <img
+                    //         src={`/api/v1/product/product-photo/${p._id}`}
+                    //         className="card-img-top"
+                    //         alt={p.name}
+                    //         width="100px"
+                    //         height={"100px"}
+                    //       />
+                    //     </div>
+                    //     <div className="col-md-8">
+                    //       <p>{p.name}</p>
+                    //       <p>{p.description.substring(0, 30)}</p>
+                    //       <p>Price : {p.price}</p>
+                    //     </div>
+
+                    //     <button
+                    //         className="btn btn-info ms-1"
+                    //         onClick={() => navigate(`/dashboard/user/view/${p.slug}`)}
+                    //       >
+                    //         Study
+                    // </button>
+                    //   </div>
+                   
+         
+                      <div className="ccard card m-2" key={p._id}>
+                        <div className="main-content">
                           <img
                             src={`/api/v1/product/product-photo/${p._id}`}
                             className="card-img-top"
                             alt={p.name}
-                            width="100px"
-                            height={"100px"}
                           />
-                        </div>
-                        <div className="col-md-8">
-                          <p>{p.name}</p>
-                          <p>{p.description.substring(0, 30)}</p>
-                          <p>Price : {p.price}</p>
-                        </div>
+                          <div className="card-body">
+                            <div className="card-name-price">
+                              <h5 className="card-title">{p.name}</h5>
+                              <ul className="list-unstyled d-flex  text-warning mb-0">
+                                <li><i className="fas fa-star fa-sm" /></li>
+                                <li><i className="fas fa-star fa-sm" /></li>
+                                <li><i className="fas fa-star fa-sm" /></li>
+                                <li><i className="fas fa-star fa-sm" /></li>
+                                <li><i className="far fa-star fa-sm" /></li>
+                              </ul>
 
-                        <button
-                            className="btn btn-info ms-1"
-                            onClick={() => navigate(`/dashboard/user/view/${p.slug}`)}
-                          >
-                            Study
-                    </button>
+                              <h5 className="card-title card-price">
+                                ₹
+                                {p.price.toLocaleString("en-US", {
+                                  // style: "currency",
+                                  // currency: "₹",
+                                })}
+                              </h5>
+                            </div>
+                            <p className="card-text ">
+                              {p.description.substring(0, 60)}...
+                            </p>
+                          </div>
+                          <div className="card-name-price  overlay-content">
+                            <div className="cbtn">
+                              <button
+                                className="btn btn-info ms-1"
+                                onClick={() => navigate(`/dashboard/user/view/${p.slug}`)}
+                              >
+                                Study
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
+
+
+        
                     ))}
                   </div>
-                </div>
+           
               );
             })}
           </div>

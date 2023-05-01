@@ -4,6 +4,12 @@
   box-sizing: 0;
 }
 
+.dashboard{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
 .nav{
   height: 9vh;
   width: 100%;

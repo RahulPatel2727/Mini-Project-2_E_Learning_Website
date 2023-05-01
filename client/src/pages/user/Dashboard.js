@@ -19,7 +19,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      User DashBoard
+    
     </Layout>
   );
 };

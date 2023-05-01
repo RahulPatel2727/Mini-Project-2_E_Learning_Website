@@ -4,8 +4,8 @@ import Layout from '../../components/Layout'
 const Profile = () => {
   return (
     <Layout>
-    <div className="container-fluid m-3 p-3 dashboard">
-    <div className="row">
+   
+    <div className="row   dashboard">
       <div className="col-md-3">
         <UserMenu/>
       </div>
@@ -15,7 +15,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
-  </div>
+
 </Layout>   
    
   )

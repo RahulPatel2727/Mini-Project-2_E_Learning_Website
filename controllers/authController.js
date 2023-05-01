@@ -7,7 +7,7 @@ import nodemailer from 'nodemailer';
 
 export const registerController = async (req,res) => {
     try{
-        const {name,email,password,cpassword} = req.body
+        const {name,email,password,cpassword,profile} = req.body
 
         if (!name) {
             return res.send({ error: "Name is Required" });
@@ -21,6 +21,13 @@ export const registerController = async (req,res) => {
         if(password!=cpassword)
         {
           return res.send({ message: "Confirm password is not matching" });
+        }
+        if (!profile) {
+          return res.send({ message: "Account type is Required" });
+        }
+        if(profile.toLowerCase()!='student' && profile.toLowerCase()!='teacher')
+        {
+          return res.send({ message: "Invalid detail, Either choose student or teacher" });
         }
 
           
@@ -40,6 +47,7 @@ export const registerController = async (req,res) => {
             name,
             email,
             password: hashedPassword,
+            profile
         }).save();
 
         res.status(201).send({
