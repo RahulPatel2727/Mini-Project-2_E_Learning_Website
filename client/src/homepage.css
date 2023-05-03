@@ -198,7 +198,7 @@
   display: flex;
   text-align: center;
   /* background-color: lightgrey; */
-  background-color: wheat;
+  /* background-color: wheat; */
   align-items: center;
   height:400px ;
 }
@@ -207,3 +207,56 @@
   color: #000;
 }
 
+.card1{
+  background-image: url("./image/dv.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+
+.card2{
+  background-image: url("./image/mm.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+.card3{
+  background-image: url("./image/it.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+.card4{
+  background-image: url("./image/mk.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+
+.card5{
+  background-image: url("./image/pd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+
+.card6{
+  background-image: url("./image/op.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+
+.card7{
+  background-image: url("./image/pho.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+
+.card8{
+  background-image: url("./image/lop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}

@@ -1,12 +1,16 @@
 import React from 'react'
 import Layout from '../components/Layout';
 import './about.css';
+import { useNavigate} from "react-router-dom";
 const About = () => {
+
+  const navigate = useNavigate();
   return (
     <Layout>
       
 <div>
   {/* section-2 about*/}
+
   <section id="about">
     <div className="about-section wrapper">
       <div className="container">
@@ -20,13 +24,14 @@ const About = () => {
               </div>
               <div className="carousel-inner">
                 <div className="carousel-item active" data-bs-interval={1000}>
-                  {/* <img src="./image/ass1.png" className="d-block w-100" alt="..." /> */}
+                <img src={require('../image/hp1.jpg')} />
+                 
                 </div>
                 <div className="carousel-item" data-bs-interval={2000}>
-                  {/* <img src="./image/ass2.png" className="d-block w-100" alt="..." /> */}
+                <img src={require('../image/hp2.jpg')} />
                 </div>
                 <div className="carousel-item">
-                  {/* <img src="./image/ass4.png" className="d-block w-100" alt="..." /> */}
+                <img src={require('../image/hp1.jpg')} />
                 </div>
               </div> 
             </div>
@@ -34,12 +39,9 @@ const About = () => {
           <div className="col-lg-7 col-md-7 text-sec position-relative px-lg-5">
             <div className="rectangle-shape small" />
             <div className="circle-shape large" />
-            <h2>Loud &amp; Clear <br />Music</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit
-              amet leo. Mauris feugiat erat tellus. Lorem ipsum dolor sit amet consectetur adipisicing elit. A quam
-              similique, modi blanditiis, alias porro et dolore, corporis sit asperiores sed optio omnis autem officia
-              exercitationem dolorem animi mollitia? Sapiente.</p>
-            <a href="javascript:void(0)" className="main-btn">Buy Now</a>
+            <h1 style={{fontSize:"50px"}}>E-Shiksha</h1>
+            <p>Education is no longer restricted to the walls of a classroom, eLearning brings education to your fingertips.</p>
+            <a href="javascript:void(0)" className="main-btn" onClick={() => navigate("/register")}>Learn Now</a>
           </div>
         </div>
       </div>
@@ -52,22 +54,22 @@ const About = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
-            <h2>Trusted by clients across the globe</h2>
+            <h2>Trusted by students across the globe</h2>
           </div>
           <div className="col-sm-6 col-lg-3 text-center">
-            <h2>8,500</h2>
-            <p>Completed Projects</p>
+            <h2>500</h2>
+            <p>Corses</p>
           </div>
           <div className="col-sm-6 col-lg-3 text-center">
-            <h2>9,470</h2>
-            <p>Happy Clients</p>
+            <h2>970</h2>
+            <p>Students</p>
           </div>
           <div className="col-sm-6 col-lg-3 text-center">
-            <h2>1,120</h2>
-            <p>Ongoing Projects</p>
+            <h2>150</h2>
+            <p>Instructors</p>
           </div>
           <div className="col-sm-6 col-lg-3 text-center">
-            <h2>152</h2>
+            <h2>120</h2>
             <p>Awards Won</p>
           </div>
         </div>
@@ -87,23 +89,23 @@ const About = () => {
         </div>
         <div className="row pt-5">
           <div className="col-sm-6 mb-4">
-            <h4><span>~</span>How long do you take to deliver?</h4>
-            <p>Standard delivery times vary by the location selected and prevailing conditions. Once you select your location, an estimated delivery time is mentioned for each restaurant.
+            <h4><span>~</span>How do I communicate with my instructor and other students in an e-learning course?</h4>
+            <p> Communication in an e-learning course may take place through email, discussion forums, chat rooms, video conferencing, or other online tools provided by the course.
             </p>
           </div>
           <div className="col-sm-6 mb-4">
-            <h4><span>~</span>What are your delivery hours?</h4>
-            <p>Our delivery hours vary for different locations and depends on availability of supply from restaurant partners.
+            <h4><span>~</span>How do I ensure the quality of an e-learning course?</h4>
+            <p>To ensure the quality of an e-learning course, it is important to choose a reputable provider or institution, read reviews or ratings from other students, and check for accreditation or certification.
             </p>
           </div>
           <div className="col-sm-6 mb-4">
-            <h4><span>~</span>Is there a minimum order value?</h4>
-            <p>We have no minimum order value and you can order for any amount. 
+            <h4><span>~</span>How do I stay motivated in an e-learning course?</h4>
+            <p>To stay motivated in an e-learning course, it is important to set goals, create a study schedule, stay organized, participate in discussions, and seek help when needed.
             </p>
           </div>
           <div className="col-sm-6 mb-4">
-            <h4><span>~</span>Do you support bulk orders?</h4>
-            <p>In order to provide all customers with a great selection and to ensure on time delivery of your meal, we reserve the right to limit the quantities depending on supply.
+            <h4><span>~</span>What kind of equipment do I need for e-learning?</h4>
+            <p>You will need a computer or mobile device with internet access, and possibly a headset or microphone if you plan to participate in online discussions or virtual meetings.
             </p>
           </div>
         </div>
@@ -112,7 +114,7 @@ const About = () => {
   </section>
  
   {/* About section exit */}
-  <section className="growing ">
+  {/* <section className="growing ">
     <div className="container-fluid ms-0">
       <div className="row ">
         <div className="col-12 text-center mt-1">
@@ -139,7 +141,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
 </div>
 
 

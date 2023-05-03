@@ -8,37 +8,39 @@ const Footer = () =>{
       <div className="footer-col">
         <h4>company</h4>
         <ul>
-          <li><Link to="/about">about us</Link></li>
+          <li><Link to="/about" >about us</Link></li>
           <li><Link to="/contact">contact us</Link></li>
-          <li><Link to="/policy">privacy policy</Link></li>
         </ul>
       </div>
+
       <div className="footer-col">
-        <h4>get help</h4>
+        <h4>Get Help</h4>
         <ul>
-          {/* <li><a to="#">FAQ</a></li> */}
-          <li><Link to="!#">shipping</Link></li>
-          <li><Link to="!#">returns</Link></li>
-          <li><Link to="!#">order status</Link></li>
-          <li><Link to="!#">payment options</Link></li>
+          <li><Link to="!#">9014785477</Link></li>
+          <li><Link to="!#">9033785477</Link></li>
+          <li><Link to="!#">9054785477</Link></li>
+          <li><Link to="!#">9090785477</Link></li>
         </ul>
       </div>
+     
       <div className="footer-col">
         <h4>online training</h4>
         <ul>
-          <li><Link to="!#">react</Link></li>
-          <li><Link to="!#">java</Link></li>
-          <li><Link to="!#">php</Link></li>
-          <li><Link to="!#">aws</Link></li>
+          <li><Link to="https://react.dev/">react</Link></li>
+          <li><Link to="https://docs.oracle.com/en/java/">java</Link></li>
+          <li><Link to="https://www.php.net/docs.php">php</Link></li>
+          <li><Link to="https://docs.aws.amazon.com/">aws</Link></li>
         </ul>
       </div>
+
+
       <div className="footer-col">
         <h4>follow us</h4>
         <div className="social-links">
-          <Link to="!#"><i className="fab fa-facebook-f" /></Link>
-          <Link to="!#"><i className="fab fa-twitter" /></Link>
-          <Link to="!#"><i className="fab fa-instagram" /></Link>
-          <Link to="!#"><i className="fab fa-linkedin-in" /></Link>
+          <Link to="https://www.facebook.com/"><i className="fab fa-facebook-f" /></Link>
+          <Link to="https://www.twitter.com/"><i className="fab fa-twitter" /></Link>
+          <Link to="https://www.instagram.com/"><i className="fab fa-instagram" /></Link>
+          <Link to="https://www.linkedin.com/"><i className="fab fa-linkedin-in" /></Link>
         </div>
       </div>
     </div>

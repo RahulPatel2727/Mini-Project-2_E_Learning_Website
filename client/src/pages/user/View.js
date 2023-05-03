@@ -50,10 +50,10 @@ const View = () => {
           <h6>Name : {product.name}</h6>
           <h6>Description : {product.description}</h6>
           <h6>
-            Price :
+            Price : ₹
             {product?.price?.toLocaleString("en-US", {
-              style: "currency",
-              currency: "USD",
+              // style: "currency",
+              // currency: "USD",
             })}
           </h6>
           <h6>Category : {product?.category?.name} </h6>

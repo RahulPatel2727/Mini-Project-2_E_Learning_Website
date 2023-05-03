@@ -22,7 +22,8 @@ const Header = () =>{
                             <span className="navbar-toggler-icon" />
                         </button>
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                            <NavLink to="/" className="navbar-brand" href="#">E-Shiksha</NavLink>
+                            <NavLink to="/" className="navbar-brand" href="#">
+                                    <img src={require('../image/logo1.png')}/>                          </NavLink>
 
                           
 
@@ -36,6 +37,7 @@ const Header = () =>{
                                             </NavLink>
                                             <ul className="dropdown-menu">
                                                 <li><NavLink to="https://harsh-1000.github.io/Project-Algorithm-Visualizer/" target='blank' className="dropdown-item" >Algorithm Visualizer</NavLink></li>
+                                                <li><NavLink className="dropdown-item"  to="/lucky">Lucky</NavLink></li>
                                                 <li><NavLink className="dropdown-item"  to="https://scratch.mit.edu/" target='blank' >Scratch</NavLink></li>
                                               
                                             </ul>

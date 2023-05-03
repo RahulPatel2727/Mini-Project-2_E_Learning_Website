@@ -26,7 +26,7 @@ import Products from './pages/Admin/Products';
 import AdminUsers from './pages/Admin/AdminUsers';
 import View from './pages/user/View';
 import AllCourses from './pages/AllCourse';
-
+import { LuckyApp } from './lucky/LuckyApp';
 
 function App() {
   return (
@@ -71,6 +71,7 @@ function App() {
       <Route path="/reset" element={<ResetPassword/>} />
       <Route path="/cart" element={<CartPage/>} />
       <Route path="/courses" element={<AllCourses/>} />
+      <Route path="/lucky" element={<LuckyApp/>} />
      
       <Route path="*" element={<PageNotFound  />  } />
     </Routes>

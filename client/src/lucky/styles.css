@@ -1,0 +1,52 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #ff4000;
+  padding: 10px;
+}
+#wheel {
+  display: flex;
+}
+.box {
+  padding: 30px 40px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 650px;
+  z-index: 2;
+  position: absolute;
+}
+.box .imageBox {
+  text-align: center;
+}
+.box img {
+  width: 550px;
+}
+.title {
+  text-align: center;
+  font-size: 32px;
+}
+.closeContainer {
+  display: flex;
+  justify-content: center;
+}
+.closepankaj {
+  margin-top: 30px;
+  width: 240px;
+  height: 54px;
+  cursor: pointer;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: #2466ff;
+  border-radius: 5px;
+}
