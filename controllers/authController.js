@@ -254,7 +254,7 @@ const sendOTPEmail = (email, otp) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'harshzoro001@gmail.com', // replace with your email address
+      user: process.env.EMAIL, // replace with your email address
       pass: process.env.PASSWORD // replace with your email password
     }
   });
