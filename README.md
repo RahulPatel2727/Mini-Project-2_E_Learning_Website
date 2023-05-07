@@ -2,7 +2,7 @@
 Mini-Project prepared by the students of GLA University
 This project uses technology like JavaScript, HTML, CSS, BootStrap, NodeJS, ExpressJS, ReactJS, MongoDB, GitHub, Git.
 
-1. Project Sysnopsis
+1. Project Synopsis
 2. Project Report
 3. Project Presentation
 4. Project video
